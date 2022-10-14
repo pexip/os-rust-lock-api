@@ -1,0 +1,34 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lock_api 0.4.9 --all-targets --all-features
+Features: test-name=rust-lock-api:@
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lock_api 0.4.9 --all-targets --no-default-features --features arc_lock
+Features: test-name=librust-lock-api-dev:arc_lock
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lock_api 0.4.9 --all-targets 
+Features: test-name=librust-lock-api-dev:default
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lock_api 0.4.9 --all-targets --no-default-features --features nightly
+Features: test-name=librust-lock-api-dev:nightly
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lock_api 0.4.9 --all-targets --no-default-features --features owning_ref
+Features: test-name=librust-lock-api-dev:owning_ref
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lock_api 0.4.9 --all-targets --no-default-features --features serde
+Features: test-name=librust-lock-api-dev:serde
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lock_api 0.4.9 --all-targets --no-default-features
+Features: test-name=librust-lock-api-dev:
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable

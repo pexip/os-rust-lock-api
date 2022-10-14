@@ -1,0 +1,58 @@
+Source: rust-lock-api
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>,
+ librust-autocfg-1+default-dev (>= 1.1.0-~~) <!nocheck>,
+ librust-scopeguard-1-dev (>= 1.1.0-~~) <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Sylvestre Ledru <sylvestre@debian.org>,
+ Wolfgang Silbermayr <wolfgang@silbermayr.at>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/lock-api]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/lock-api
+X-Cargo-Crate: lock_api
+Rules-Requires-Root: no
+
+Package: librust-lock-api-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-autocfg-1+default-dev (>= 1.1.0-~~),
+ librust-owning-ref-0.4+default-dev (>= 0.4.1-~~),
+ librust-scopeguard-1-dev (>= 1.1.0-~~),
+ librust-serde-1-dev (>= 1.0.126-~~)
+Provides:
+ librust-lock-api+arc-lock-dev (= ${binary:Version}),
+ librust-lock-api+default-dev (= ${binary:Version}),
+ librust-lock-api+nightly-dev (= ${binary:Version}),
+ librust-lock-api+owning-ref-dev (= ${binary:Version}),
+ librust-lock-api+serde-dev (= ${binary:Version}),
+ librust-lock-api-0-dev (= ${binary:Version}),
+ librust-lock-api-0+arc-lock-dev (= ${binary:Version}),
+ librust-lock-api-0+default-dev (= ${binary:Version}),
+ librust-lock-api-0+nightly-dev (= ${binary:Version}),
+ librust-lock-api-0+owning-ref-dev (= ${binary:Version}),
+ librust-lock-api-0+serde-dev (= ${binary:Version}),
+ librust-lock-api-0.4-dev (= ${binary:Version}),
+ librust-lock-api-0.4+arc-lock-dev (= ${binary:Version}),
+ librust-lock-api-0.4+default-dev (= ${binary:Version}),
+ librust-lock-api-0.4+nightly-dev (= ${binary:Version}),
+ librust-lock-api-0.4+owning-ref-dev (= ${binary:Version}),
+ librust-lock-api-0.4+serde-dev (= ${binary:Version}),
+ librust-lock-api-0.4.9-dev (= ${binary:Version}),
+ librust-lock-api-0.4.9+arc-lock-dev (= ${binary:Version}),
+ librust-lock-api-0.4.9+default-dev (= ${binary:Version}),
+ librust-lock-api-0.4.9+nightly-dev (= ${binary:Version}),
+ librust-lock-api-0.4.9+owning-ref-dev (= ${binary:Version}),
+ librust-lock-api-0.4.9+serde-dev (= ${binary:Version})
+Description: Wrappers to create fully-featured Mutex and RwLock types - Rust source code
+ Compatible with no_std.
+ .
+ This package contains the source for the Rust lock_api crate, packaged by
+ debcargo for use with cargo and dh-cargo.
