@@ -8,8 +8,9 @@ Build-Depends: debhelper (>= 12),
  libstd-rust-dev <!nocheck>,
  librust-autocfg-1+default-dev (>= 1.1.0-~~) <!nocheck>,
  librust-scopeguard-1-dev (>= 1.1.0-~~) <!nocheck>
-Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
-Uploaders:
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+XSBC-Pexip-Original-Uploaders:
  Sylvestre Ledru <sylvestre@debian.org>,
  Wolfgang Silbermayr <wolfgang@silbermayr.at>
 Standards-Version: 4.5.1
@@ -17,6 +18,7 @@ Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/lock-api]
 Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/lock-api
 X-Cargo-Crate: lock_api
 Rules-Requires-Root: no
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ bookworm
 
 Package: librust-lock-api-dev
 Architecture: any
